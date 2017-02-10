@@ -11,7 +11,7 @@
   console.log(go)
 
   go.addEventListener('click', function(event){
-      go.classList.toggle("go");
+      //go.classList.toggle("go");
     var greenLight = document.getElementById('goLight')
     console.log(greenLight, "greenLight")
       greenLight.classList.toggle("go")
@@ -22,7 +22,7 @@ var slow = document.getElementById('slowButton')
 console.log(slow, "slow")
 
 slow.addEventListener('click', function(event){
-  slow.classList.toggle('slow')
+  //slow.classList.toggle('slow')
 
   var yellowLight = document.getElementById('slowLight')
   console.log('yellowLight', yellowLight)
@@ -33,54 +33,40 @@ slow.addEventListener('click', function(event){
 var stop = document.getElementById('stopButton')
 
 stop.addEventListener("click", function(event){
-  stop.classList.toggle('stop')
+  //stop.classList.toggle('stop')
 
   var redLight = document.getElementById('stopLight')
     redLight.classList.toggle('stop')
 })
 
+//can one loop add two event listeners?
 
-// var controls = document.getElementById('controls')
-// var lights = document.getElementById('traffic-light')
-// //add overarching listener for buttons
-//   controls.addEventListener('click', function (event) {
-//       //overaching listener applied? now how to target individual buttons efficiently?
+var test = document.getElementsByClassName('button')
+console.log('test', test)
+for (var i = 0; i < test.length; i++) {
+  let eachButton = test[i]
+  console.log(eachButton, "eachButton")
 
+  eachButton.addEventListener("mouseenter", function(event) {
+//   // highlight the mouseenter target
+  //event.target.style.color = "purple";
+  console.log("Entered " + eachButton.innerText + " button")
 
+  eachButton.addEventListener("mouseout", function(event) {
+    console.log("Left " + eachButton.innerText + "button")
+  })
 
+})
+}
 
-
-
-
-
-
-  //loop through and add individual event listeners?
-  //decide if I want event as a parameter. most likely yes because this will give me the individuals buttons back instead of the object. but do I know why I want this?
-
-// for (var i = 0; i < buttons.length; i++) {
-//   buttons[i]
-// }
-
-
-
-
-
-
-
-
-//div.classList.toggle("visible", i < 10 ); toggly w/o jQuery...
-
-//add event listeners to buttons. each button should have a different one.
-
-//use classList.toggle() to toggle. when toggling I will probably want to add the correct class to the button to style it?
-
-//remove the class when clicked again? ie div.classList.remove('go')
-
-//is that it? seems to easy.
-
-
-
+//BONUS. NOT THERE YET. 
+// Add one DOM event listener and one handler to log the state of each bulb.
 //
+// When a user clicks a button that just turned on, log"<textContent> bulb on" to the console.
+// When a user clicks a button that just turned off, log"<textContent> bulb off" to the console.
+// TIP: A click on only a button should cause a message to be logged to the console.
+
+
 
 
 
