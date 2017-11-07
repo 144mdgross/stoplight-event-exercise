@@ -53,13 +53,13 @@ for (var i = 0; i < test.length; i++) {
   console.log("Entered " + eachButton.innerText + " button")
 
   eachButton.addEventListener("mouseout", function(event) {
-    console.log("Left " + eachButton.innerText + "button")
+    console.log("Left " + eachButton.innerText + " button")
   })
 
 })
 }
 
-//BONUS. NOT THERE YET. 
+//BONUS. NOT THERE YET.
 // Add one DOM event listener and one handler to log the state of each bulb.
 //
 // When a user clicks a button that just turned on, log"<textContent> bulb on" to the console.
